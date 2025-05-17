@@ -1,31 +1,54 @@
-<!DOCTYPE html -contract page>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Form</title>
+  <title>Md Ismail Hossen - Mechanical Engineer</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <div class="contact-form-container">
-    <form class="contact-form" action="#" method="post">
-      <label for="name">Your Name</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Your Email</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="subject">Subject</label>
-      <input type="text" id="subject" name="subject" required>
-
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="6" required></textarea>
-
-      <button type="submit">Send Message</button>
-    </form>
+  <div class="container">
+    <div class="profile">
+      <img src="https://i.ibb.co/6H3XdXq/profile.png" alt="Profile Photo" class="profile-img">
+      <h1>Md Ismail Hossen</h1>
+      <h2>Mechanical Engineer</h2>
+      <p>
+        Hello! I am Md Ismail Hossen, a passionate Mechanical Engineer. <br>
+        I love designing and solving real-life engineering problems.<br>
+        Welcome to my personal website!
+      </p>
+      <div class="contact-info">
+        <p><strong>Email:</strong> your.email@example.com</p>
+        <p><strong>Phone:</strong> +8801XXXXXXXXX</p>
+      </div>
+    </div>
+    <div class="section">
+      <h3>About Me</h3>
+      <p>
+        I have a B.Sc. in Mechanical Engineering. I am skilled in 3D modeling, CAD, and thermal systems.
+        I enjoy learning new technologies and working on innovative projects.
+      </p>
+    </div>
+    <div class="section">
+      <h3>Skills</h3>
+      <ul>
+        <li>3D Design (SolidWorks, AutoCAD)</li>
+        <li>Thermodynamics</li>
+        <li>Manufacturing</li>
+        <li>Project Management</li>
+        <li>Problem Solving</li>
+      </ul>
+    </div>
+    <div class="section">
+      <h3>Contact Me</h3>
+      <form class="contact-form" action="#" method="post">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
   </div>
-
 </body>
 </html>
