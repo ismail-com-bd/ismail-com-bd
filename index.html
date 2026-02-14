@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Md Ismail Hossen | Lead Maintenance Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #00C8FF;
+            --secondary: #BC00FF;
+            --bg-deep: #05070A;
+            --bg-charcoal: #0F1218;
+            --border-alpha: rgba(255, 255, 255, 0.05);
+        }
+
+        * {
+            -webkit-tap-highlight-color: transparent;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-deep);
+            color: #F5F5F5;
+            overflow-x: hidden;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            pointer-events: auto !important;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .tactical-grid-overlay {
+            position: fixed;
+            inset: 0;
+            background-image: 
+                linear-gradient(var(--border-alpha) 1px, transparent 1px),
+                linear-gradient(90deg, var(--border-alpha) 1px, transparent 1px);
+            background-size: clamp(20px, 5vw, 40px) clamp(20px, 5vw, 40px);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .industrial-panel {
+            background: var(--bg-charcoal);
+            border: 1px solid var(--border-alpha);
+            position: relative;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Stroke text for that premium industrial look */
+        .stroke-text {
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+            color: transparent;
+        }
+
+        .glitch-hover:hover {
+            animation: glitch-anim 0.3s infinite;
+            text-shadow: 2px 0 #BC00FF, -2px 0 #00C8FF;
+        }
+
+        @keyframes glitch-anim {
+            0% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+            100% { transform: translate(0); }
+        }
+
+        .scanner-line {
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+            box-shadow: 0 0 15px var(--primary);
+            animation: scan 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+            z-index: 5;
+            pointer-events: none;
+        }
+
+        @keyframes scan {
+            0% { top: -10%; opacity: 0; }
+            10% { opacity: 0.5; }
+            90% { opacity: 0.5; }
+            100% { top: 110%; opacity: 0; }
+        }
+
+        @keyframes gradient-flow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .animate-gradient-flow {
+            animation: gradient-flow 6s ease infinite;
+        }
+
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: var(--bg-deep); }
+        ::-webkit-scrollbar-thumb {
+            background: #222;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover { background: var(--primary); }
+
+        .nav-gradient-bg {
+            background: radial-gradient(circle at center, rgba(0, 200, 255, 0.08) 0%, transparent 80%);
+        }
+
+        section {
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Fluid Typography helpers */
+        .text-fluid-hero { font-size: clamp(3rem, 15vw, 11rem); }
+        .text-fluid-heading { font-size: clamp(2rem, 10vw, 8rem); }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "framer-motion": "https://esm.sh/framer-motion@^12.34.0",
+        "lucide-react": "https://esm.sh/lucide-react@^0.564.0",
+        "react/": "https://esm.sh/react@^19.2.4/",
+        "react": "https://esm.sh/react@^19.2.4",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+      }
+    }
+    </script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div class="tactical-grid-overlay"></div>
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
